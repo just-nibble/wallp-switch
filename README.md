@@ -109,18 +109,24 @@ To get a local copy up and running follow these simple example steps.
 
 2. Copy the executable to ~./local/bin
 
-3. RUN `switcher` in terminal
+3. RUN ```switcher``` in terminal
 
-4. Optional: Map to shortcut
+4. Optional: Map the executable to shortcut
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## alternatively ##
+1. ```git clone```
+2. ```cd wallp-switch```
+3. ```make build```
+4. ```make install```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Plug in a USB device
+RUN `switcher` in terminal or map the executable to shortcut
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
