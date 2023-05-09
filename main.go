@@ -4,11 +4,13 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"os/exec"
 	"os/user"
 	"strconv"
 	"strings"
+	"time"
 )
 
 var wallpapers []string = []string{}
@@ -81,13 +83,10 @@ func get_wallpapers() {
 }
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
 	get_wallpapers()
 	var current_wallpaper int64 = get_current_wallpaper()
 	fmt.Println(SwitchWallpaper(current_wallpaper))
-	if current_wallpaper <= int64(len(wallpapers)-1) {
-		current_wallpaper++
-	} else {
-		current_wallpaper = 0
-	}
+	current_wallpaper = rand.Int63n(int64(len(wallpapers)) - 1)
 	set_wallpaper(current_wallpaper)
 }
