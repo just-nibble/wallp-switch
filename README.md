@@ -81,7 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A utility that randomly switches KDE your wallpaper.
-It checks for wallpapers in your ~/Pictures/wallpapers directory
+It checks for wallpapers in your ~/Pictures/wallpaper directory
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
