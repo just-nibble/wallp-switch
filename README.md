@@ -37,7 +37,7 @@
 <h3 align="center">wallp-switch</h3>
 
   <p align="center">
-    A utility that randomly switches KDE your wallpaper
+    A utility that randomly switches your desktop your wallpaper
     <br />
     <a href="https://github.com/just-nibble/wallp-switch"><strong>Explore the docs »</strong></a>
     <br />
@@ -80,7 +80,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A utility that randomly switches KDE your wallpaper.
+A utility that randomly switches your desktop your wallpaper.
 It checks for wallpapers in your ~/Pictures/wallpaper directory
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +100,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-1. KDE desktop environment
+1. Any major desktop environment
 
 ### Installation
 
