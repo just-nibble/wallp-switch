@@ -76,6 +76,6 @@ func get_wallpapers() {
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	get_wallpapers()
-	var current_wallpaper int64 = rand.Int63n(int64(len(wallpapers)) - 1)
+	var current_wallpaper int64 = rand.Int63n(int64(len(wallpapers)))
 	fmt.Println(switchWallpaper(current_wallpaper))
 }
