@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"flag"
 	"fmt"
 	"log"
 	"math/rand"
@@ -17,10 +18,11 @@ var wallpapers []string = []string{}
 var usr, _ = user.Current()
 var dir string = usr.HomeDir
 
-var folder string = dir + "/Pictures/wallpaper/"
+var folder_string string = dir + "/Pictures/wallpaper"
+var folder = flag.String("folder", folder_string, "Wallpaper folder")
 
 func switchWallpaper(wallpaper int64) (msg string, err error) {
-	var wallpaper_path string = folder + wallpapers[wallpaper]
+	var wallpaper_path string = *folder + "/" + wallpapers[wallpaper]
 	var command string
 	var args []string = []string{}
 
@@ -58,7 +60,7 @@ func switchWallpaper(wallpaper int64) (msg string, err error) {
 }
 
 func get_wallpapers() {
-	file, err := os.Open(folder)
+	file, err := os.Open(*folder)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -69,13 +71,17 @@ func get_wallpapers() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	wallpapers = names
 }
 
 func main() {
+	flag.Parse()
 	rand.Seed(time.Now().UnixNano())
 	get_wallpapers()
 	var current_wallpaper int64 = rand.Int63n(int64(len(wallpapers)))
-	fmt.Println(switchWallpaper(current_wallpaper))
+	message, err := switchWallpaper(current_wallpaper)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(message)
 }
