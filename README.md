@@ -81,7 +81,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A utility that randomly switches your desktop your wallpaper.
-It checks for wallpapers in your ~/Pictures/wallpaper directory
+It checks for wallpapers in your ~/Pictures/wallpaper directory by default
+this can be changed by using --folder="custom_folder"
+use --help to see list of options
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
